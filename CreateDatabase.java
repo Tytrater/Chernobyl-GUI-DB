@@ -147,17 +147,18 @@ public class CreateDatabase {
 		         
 		         // Create the table.
 		         stmt.execute("CREATE TABLE Healthcare "+
-		            "( Title CHAR(50) NOT NULL PRIMARY KEY,"+
+		            "( ID CHAR(10) NOT NULL PRIMARY KEY,"+
+		            "  Title CHAR(25),"    +
 		            "  Specialty CHAR(25),"    +
 		            "  Hours CHAR(25),"    +
 		            "  TelephoneNumber CHAR(25),"    +
-		            "  Adress CHAR (100) )");
+		            "  Adress CHAR (50) )");
 
 		         // Add some rows to the new table.
-		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('Dymer Central Town "
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('100' , 'Dymer Central Town "
 		         		+ "Hospital', 'Physial Care', '0800-1600', '380 44 294 6045',"
 		         		+ " 'Revoliutsii St, 320, Dymer, Kyiv Oblast, Ukrain, 07300')");
-		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('Care Mental "
+		         stmt.executeUpdate("INSERT INTO Customer VALUES ('101' , 'Care Mental "
 			         		+ "Hospital', 'Mental Care', '0500-2300', '390 64 344 6565',"
 			         		+ " 'Senza St, 320, Dymer, Pripya Oblast, Ukrain, 04905')");         
 
