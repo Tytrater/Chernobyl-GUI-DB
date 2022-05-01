@@ -1,4 +1,3 @@
-package edu.unlv.mis768.DB;
 import java.sql.*;   // Needed for JDBC classes
 
 public class CreateDatabase {
@@ -100,6 +99,29 @@ public class CreateDatabase {
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterOne', 'sampleShelterAddress1', '548-25-621', 20,3,1)");
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwo','sampleShelterAddress2','548-49-621', 8,15,2)");
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterThree','sampleShelterAddress3','571-25-888', 5,2,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterFour','sampleShelterAddress4','222-25-998', 3,4,20)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterFive','sampleShelterAddress5','555-25-555', 2,2,20)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterSix','sampleShelterAddress6','571-99-999', 2,8,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterSeven','sampleShelterAddress7','654-33-888', 4,4,4)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterEight','sampleShelterAddress8','441-55-888', 55,2,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterNine','sampleShelterAddress9','444-45-449', 5,10,12)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTen','sampleShelterAddress10','333-33-338', 9,4,12)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterEleven','sampleShelterAddress11','221-22-333', 2,2,9)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwelve','sampleShelterAddress12','444-25-4444', 5,2,5)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterThirteen','sampleShelterAddress13','001-25-008', 6,8,9)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterFourteen','sampleShelterAddress14','022-15-188', 5,4,4)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterFifteen','sampleShelterAddress15',8871-15-811', 5,5,4)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterSixteen','sampleShelterAddress16','522-25-7873', 5,2,5)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterSeventeen','sampleShelterAddress17','331-25-888', 2,2,5)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterEighteen','sampleShelterAddress18','022-25-0000', 5,3,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterNineteen','sampleShelterAddress19','531-25-3438', 3,4,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwenty','sampleShelterAddress20','572-15-888', 5,2,9)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyOne','sampleShelterAddress21','331-25-488', 1,2,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyTwo','sampleShelterAddres22','333-25-8845', 1,2,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyThree','sampleShelterAddress23','331-25-888', 5,2,4)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyFour','sampleShelterAddress24','271-25-888', 5,8,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyFive,'sampleShelterAddress25','221-15-348', 5,4,10)");
+					
 					
 					// confirmation message
 					System.out.println("Shelter table created.");
@@ -130,7 +152,30 @@ public class CreateDatabase {
 					// Insert data
 					stmt.execute("INSERT INTO Work VALUES ('Emp1','Plumber','Trade','sampleaddress1', '350 44 494 6095', 15)");
 					stmt.execute("INSERT INTO Work VALUES ('Emp2','Manager','Management','sampleaddress2','380 44 224 6045', 60)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp3','Administrator','Administration','sampleaddress3','381 44 284 6045', 30)"); 
+					stmt.execute("INSERT INTO Work VALUES ('Emp3','Administrator','Administration','sampleaddress3','381 44 284 6045', 30)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp4','Manager','Management','sampleaddress4','280 44 224 6045', 60)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp5','Plumber','Trade','sampleaddress5','750 54 724 6445', 120)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp6','Plumber','Trade','sampleaddress6','555 34 454 6569', 30)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp7','Administrator','Administration','sampleaddress7','310 44 567 4444', 45");
+					stmt.execute("INSERT INTO Work VALUES ('Emp8','Manager','Management','sampleaddress8','323 12 264 6045', 20)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp9','Manager','Management','sampleaddress9','37 0 44 224 6045', 45)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp10','Aministrator','Administration','sampleaddress10','480 74 664 6065', 30)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp11','Plumber','Trade','sampleaddress11','320 44 224 6045', 93)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp12','Plumber','Trade','sampleaddress12',270 43 233 3345', 40)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp13','Manager','Management','sampleaddress13','110 44 111 6345', 70)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp14','Plumber','Trade','sampleaddress14','380 33 224 6333', 90)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp15','Aministrator','Administration','sampleaddress15','380 42 224 6045', 30)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp16','Manager','Management','sampleaddress16','888 44 874 9945', 80)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp17','Aministrator','Administration','sampleaddress17','770 44 234 6045', 20)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp18','Manager','Management','sampleaddress18','311 94 774 7775', 60)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp19','Manager','Management','sampleaddress19','380 44 224 6045', 10)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp20','Aministrator','Administration'','sampleaddress20','990 94 224 9995', 10)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp21','Aministrator','Administration','sampleaddress21','555 94 224 6555', 40)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp22','Plumber','Trade','sampleaddress22','345 14 114 1145', 100)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp23','Manager','Management','sampleaddress23','999 54 325 9045', 60)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp24','Aministrator','Administration','sampleaddress24','222 34 564 6945', 20)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp25','Plumber','Trade','sampleaddress25','111 34 224 6099', 20)");
+					
 					
 					// confirmation message
 					System.out.println("Work table created.");
@@ -164,7 +209,77 @@ public class CreateDatabase {
 		         		+ " 'Revoliutsii St, 320, Dymer, Kyiv Oblast, Ukrain, 07300')");
 		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('101' , 'Care Mental "
 			         		+ "Hospital', 'Mental', '0500-2300', '390 64 344 6565',"
-			         		+ " 'Senza St, 320, Dymer, Pripya Oblast, Ukrain, 04905')");         
+			         		+ " 'Senza St, 320, Dymer, Pripya Oblast, Ukrain, 04905')"); 
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('102' , 'Hope "
+			         		+ "Hospital', 'Mental', '0500-2200', '110 64 114 6565',"
+			         		+ " 'Address3')");   
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('103' , 'Happy "
+			         		+ "Hospital', 'Physical', '0400-2200', '900 64 224 6565',"
+			         		+ " 'Address4')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('104' , 'Love "
+			         		+ "Hospital', 'Mental', '0500-2000', '220 64 114 9965',"
+			         		+ " 'Address5')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('105' , 'Euphoria "
+			         		+ "Hospital', 'Mental', '0500-2200', '345 64 134 6685',"
+			         		+ " 'Address6')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('106' , 'Wellness "
+			         		+ "Hospital', 'Mental', '0900-2200', '110 64 414 6795',"
+			         		+ " 'Address7')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('107' , 'Sunshine "
+			         		+ "Hospital', 'Physical', '0500-2200', '110 64 114 7777',"
+			         		+ " 'Address8')"); 
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('108' , 'Happiness "
+			         		+ "Hospital', 'Mental', '0700-2200', '555 65 554 6565',"
+			         		+ " 'Address9')"); 
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('109' , 'View "
+			         		+ "Hospital', 'Physical', '0300-2200', '110 64 884 8865',"
+			         		+ " 'Address10')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('110' , 'Blue "
+			         		+ "Hospital', 'Mental', '0500-2200', '440 74 114 7875',"
+			         		+ " 'Address11')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('111' , 'Red "
+			         		+ "Hospital', 'Mental', '0500-2200', '440 74 554 6666',"
+			         		+ " 'Address12')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('112' , 'Purple "
+			         		+ "Hospital', 'Physical', '0430-2200', '888 77 444 7335',"
+			         		+ " 'Address13')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('113' , 'Yellow "
+			         		+ "Hospital', 'Mental', '0400-2300', '140 74 111 2222',"
+			         		+ " 'Address14')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('114' , 'Green "
+			         		+ "Hospital', 'Physical', '0500-2200', '420 99 314 2223',"
+			         		+ " 'Address15')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('115' , 'Orange "
+			         		+ "Hospital', 'Physical', '0500-2200', '340 34 133 3333',"
+			         		+ " 'Address16')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('116' , 'Winter "
+			         		+ "Hospital', 'Physical', '0300-2100', '222 22 224 7225',"
+			         		+ " 'Address17')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('117' , 'Summer "
+			         		+ "Hospital', 'Mental', '0300-2200', '740 84 664 4645',"
+			         		+ " 'Address18')");
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('118' , 'Fall "
+			         		+ "Hospital', 'Mental', '0500-2300', '333 34 224 1111',"
+			         		+ " 'Address19')"); 
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('119' , 'Spring "
+			         		+ "Hospital', 'Physical', '0500-2200', '444 74 114 4444',"
+			         		+ " 'Address20')"); 
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('120' , 'Autumn "
+			         		+ "Hospital', 'Mental', '0500-2200', '340 74 334 7445',"
+			         		+ " 'Address21')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('121' , 'Centennial "
+			         		+ "Hospital', 'Physical', '0500-2300', '111 74 774 7875',"
+			         		+ " 'Address22')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('122' , 'Rainbow "
+			         		+ "Hospital', 'Mental', '0400-2200', '440 74 114 0000',"
+			         		+ " 'Address23')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('123' , 'Kyviv "
+			         		+ "Hospital', 'Mental', '0500-2200', '110 74 114 0001',"
+			         		+ " 'Address24')");  
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('124' , 'Chernobyl "
+			         		+ "Hospital', 'Physical', '0300-2300', '200 04 004 7875',"
+			         		+ " 'Address25')");  
+		         
 
 				 // confirmation message
 				 System.out.println("Healthcare table created.");
@@ -230,5 +345,4 @@ public class CreateDatabase {
 					}
 		      
 			}
-
 }
