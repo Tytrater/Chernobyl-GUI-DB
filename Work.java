@@ -43,6 +43,11 @@ public class Work extends Provider {
 		return address + " " + username + " " + password + " " + patientList + " " + phoneNumber + " " + openings;
 	}
 	
+	// restircted toString method to display to patients
+	public String patientToString() {
+		return username + " " + address + " " + phoneNumber;
+	}
+	
 	
 
 }

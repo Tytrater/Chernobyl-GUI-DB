@@ -1,4 +1,4 @@
-package edu.unlv.mis768.Database;
+package edu.unlv.mis768.DB;
 import java.sql.*;   // Needed for JDBC classes
 
 public class CreateDatabase {
@@ -90,14 +90,16 @@ public class CreateDatabase {
 					// Create the table.
 					stmt.execute("CREATE TABLE Shelter ("+ 
 		   				       	 "ShelterTitle CHAR(25) NOT NULL PRIMARY KEY,"+ 
-		   				         "Size1Capacity DOUBLE,"+ 
-		   				         "Size2Capacity DOUBLE,"+ 
-		                         "Size3Capacity DOUBLE)");
+		   				       	 "Address CHAR (75),"+ 
+		   				       	 "PhoneNumber CHAR (20),"+ 
+		   				         "Size1Capacity INT,"+ 
+		   				         "Size2Capacity INT,"+ 
+		                         "Size3Capacity INT)");
 									 
 					// Insert data
-					stmt.execute("INSERT INTO Shelter VALUES ('ShelterOne', 20,3,1)");
-					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwo', 8,15,2)");
-					stmt.execute("INSERT INTO Shelter VALUES ('ShelterThree', 5,2,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterOne', 'sampleShelterAddress1', '548-25-621', 20,3,1)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwo','sampleShelterAddress2','548-49-621', 8,15,2)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterThree','sampleShelterAddress3','571-25-888', 5,2,10)");
 					
 					// confirmation message
 					System.out.println("Shelter table created.");
@@ -121,12 +123,14 @@ public class CreateDatabase {
 							   "Name CHAR(25) NOT NULL PRIMARY KEY,"+
 							   "JobTitle CHAR(25),"+
 		   				       "Skills CHAR(25),"+ 
+		   				       "Address CHAR(75),"+ 
+		   				       "PhoneNumber CHAR(25),"+ 
 		                       "openings DOUBLE)");
 									 
 					// Insert data
-					stmt.execute("INSERT INTO Work VALUES ('Emp1','Plumber','Trade', 15)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp2','Manager','Management', 30)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp3','Administrator','Administration', 30)"); 
+					stmt.execute("INSERT INTO Work VALUES ('Emp1','Plumber','Trade','sampleaddress1', '350 44 494 6095', 15)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp2','Manager','Management','sampleaddress2','380 44 224 6045', 60)");
+					stmt.execute("INSERT INTO Work VALUES ('Emp3','Administrator','Administration','sampleaddress3','381 44 284 6045', 30)"); 
 					
 					// confirmation message
 					System.out.println("Work table created.");
@@ -148,18 +152,18 @@ public class CreateDatabase {
 		         // Create the table.
 		         stmt.execute("CREATE TABLE Healthcare "+
 		            "( ID CHAR(10) NOT NULL PRIMARY KEY,"+
-		            "  Title CHAR(25),"    +
+		            "  Title CHAR(50),"    +
 		            "  Specialty CHAR(25),"    +
 		            "  Hours CHAR(25),"    +
 		            "  TelephoneNumber CHAR(25),"    +
-		            "  Adress CHAR (50) )");
+		            "  Adress CHAR (75) )");
 
 		         // Add some rows to the new table.
 		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('100' , 'Dymer Central Town "
-		         		+ "Hospital', 'Physial Care', '0800-1600', '380 44 294 6045',"
+		         		+ "Hospital', 'Physical', '0800-1600', '380 44 294 6045',"
 		         		+ " 'Revoliutsii St, 320, Dymer, Kyiv Oblast, Ukrain, 07300')");
-		         stmt.executeUpdate("INSERT INTO Customer VALUES ('101' , 'Care Mental "
-			         		+ "Hospital', 'Mental Care', '0500-2300', '390 64 344 6565',"
+		         stmt.executeUpdate("INSERT INTO Healthcare VALUES ('101' , 'Care Mental "
+			         		+ "Hospital', 'Mental', '0500-2300', '390 64 344 6565',"
 			         		+ " 'Senza St, 320, Dymer, Pripya Oblast, Ukrain, 04905')");         
 
 				 // confirmation message

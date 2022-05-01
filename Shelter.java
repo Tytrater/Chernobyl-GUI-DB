@@ -46,7 +46,12 @@ public class Shelter extends Provider {
 	
 	// Methods
 		public String toString() {
-			return address + " " + username + " " + password + " " + patientList + " " + phoneNumber + " " + bdrm2 + " " + bdrm2 + " " + bdrm3;
+			return username + " " + address  +  " "  + phoneNumber + " " + bdrm2 + " " + bdrm2 + " " + bdrm3;
+		}
+		
+		// restricted toString method to display to patients
+		public String patientToString() {
+			return username + " " + address + " " + phoneNumber;
 		}
 	
 	public void intakePatient(Family fam) {

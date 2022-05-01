@@ -3,17 +3,27 @@ package edu.unlv.mis768.GUI;
 import java.io.IOException;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class ChernobylReflief extends Application {
+	
+	//Fields
+
+    private Label healthLabel;
+    private Label shelterLabel;
+    private Label workLabel;
 
 	@Override
 	public void start(Stage primaryStage) {
+		
+		healthLabel = new Label("");
+		shelterLabel = new Label("");
+		workLabel = new Label("");
 		try {
 			System.out.println("[1]Chernobyl Relief Start");
 			

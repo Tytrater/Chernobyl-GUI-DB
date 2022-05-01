@@ -1,6 +1,8 @@
-package GroupProject;
+package edu.unlv.mis768.GUI;
 
 import java.io.IOException;
+
+import edu.unlv.mis768.Model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

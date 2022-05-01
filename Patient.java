@@ -1,13 +1,13 @@
 package edu.unlv.mis768.Model;
 
-import java.util.ArrayList;
-
 public class Patient extends User {
 	// Fields
-	ArrayList<String> physical = new ArrayList<String>();
-	ArrayList<String> mental = new ArrayList<String>();
-	ArrayList<String> work = new ArrayList<String>();
+	String healthStatus = new String();
+	String workSkill = new String();
+	int familySize;
 	
+
+
 	// Constructor
 	public Patient() {
 		
@@ -18,41 +18,40 @@ public class Patient extends User {
 		password = user.getPassword();
 	}
 	
-	public Patient(User user, ArrayList<String> p, ArrayList<String> m, ArrayList<String> w) {
+	public Patient(User user, String p, String hs) {
 		username = user.getUsername();
 		password = user.getPassword();
-		physical = p;
-		mental = m;
-		work = w;
+		healthStatus = hs;
 		
 	}
 
 	
 	// getters and setters
 	
-
-	public ArrayList<String> getPhysical() {
-		return physical;
+	public int getFamilySize() {
+		return familySize;
 	}
 
-	public void setPhysical(ArrayList<String> physical) {
-		this.physical = physical;
+	public void setFamilySize(int familySize) {
+		this.familySize = familySize;
+	}
+	
+
+	public String getHealthStatus() {
+		return healthStatus;
 	}
 
-	public ArrayList<String> getMental() {
-		return mental;
+	public void setHealthStatus(String hs) {
+		this.healthStatus = hs;
 	}
 
-	public void setMental(ArrayList<String> mental) {
-		this.mental = mental;
+
+	public String getWork() {
+		return workSkill;
 	}
 
-	public ArrayList<String> getWork() {
-		return work;
-	}
-
-	public void setWork(ArrayList<String> work) {
-		this.work = work;
+	public void setWork(String ws) {
+		this.workSkill = ws;
 	}
 	
 	// Methods
@@ -62,7 +61,7 @@ public class Patient extends User {
 	}
 	
 	public String toString() {
-		return physical + "\n" + mental + "\n" + work;
+		return healthStatus + "\n" + workSkill + "\n" + familySize;
 	}
 
 }
