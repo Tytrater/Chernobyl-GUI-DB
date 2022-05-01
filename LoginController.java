@@ -1,8 +1,6 @@
-package edu.unlv.mis768.GUI;
+package GroupProject;
 
 import java.io.IOException;
-
-import edu.unlv.mis768.Model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,17 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class LoginController {
-
-    @FXML
-    private Button patientLoginButton;
-
-    @FXML
-    
-    private Button providerLoginButton;
-    
-    @FXML
-    private Button managerLoginButton;    
+public class LoginController {    
 
     @FXML
     private TextField passwordTextField;
@@ -34,21 +22,37 @@ public class LoginController {
     public void login(String userType, ActionEvent e) throws IOException {
     	System.out.println("[2]"+userType + " login");
     	User user = new User(usernameTextField.getText(), passwordTextField.getText());
+    	
+    	//Create objects
     	UserController userController = new UserController();
-    	ProviderController provController = new ProviderController();
+    	WorkController workController = new WorkController();
+    	ShelterController shelterController = new ShelterController();
+    	HealthcareController healthController = new HealthcareController();
 		ControllerLoader loader = new ControllerLoader();
+		
 		System.out.println("userType: " + userType);
     	switch(userType) {
     	case "Patient":
     		PatientController patController = new PatientController();
     		loader.PatientLoader(user, "Patient.fxml", patController, e);
     		break;
-    	case "Provider":
+    	case "Work Provider":
     		System.out.println("[3] Provider Detected");
     		System.out.println("user at login: " + user);
     		System.out.println("Controller: " + userController);
-    		//String fileName, UserController controller, User user, ActionEvent e
-    		loader.UserLoader("Provider.fxml", userController, user, e);
+    		loader.UserLoader("Work.fxml", userController, user, e);
+    		break;
+    	case "Healthcare Provider":
+    		System.out.println("[3] Healthcare Provider Detected");
+    		System.out.println("user at login: " + user);
+    		System.out.println("Controller: " + userController);
+    		loader.UserLoader("Healthcare.fxml", userController, user, e);
+    		break;
+    	case "Shelter Provider":
+    		System.out.println("[3] Healthcare Provider Detected");
+    		System.out.println("user at login: " + user);
+    		System.out.println("Controller: " + userController);
+    		loader.UserLoader("Shelter.fxml", userController, user, e);
     		break;
     	case "Manager":
     		System.out.println("[3] Manager Detected");
@@ -65,18 +69,31 @@ public class LoginController {
     	login("Patient", e);
     }
     
-    // Event Listener for Provider Login
+    // Event Listener for Shelter Provider Login
     
-    public void providerLoginButtonListener(ActionEvent e) throws IOException {
-    	login("Provider", e);
+    public void shelterLoginButtonListener(ActionEvent e) throws IOException {
+    	login("Shelter Provider", e);
+    }
+    
+    // Event Listener for Work Provider Login
+    
+    public void workLoginButtonListener(ActionEvent e) throws IOException {
+    	login("Work Provider", e);
+    }
+    
+    // Event Listener for health-care Provider Login
+    
+    public void healthLoginButtonListener(ActionEvent e) throws IOException {
+    	login("Healthcare Provider", e);
     }
     
     // Event Listener for Manager Login
     
-
     public void ManagerLoginButtonListener(ActionEvent e) throws IOException {
     	login("Manager", e);
     }
+    
+}
     
     
     /* Loader for post-login FXML File
@@ -126,6 +143,3 @@ public class LoginController {
     }
     
     */
-    
-    
-}
