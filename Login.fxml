@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GroupProject.LoginController">
    <children>
       <GridPane>
         <columnConstraints>
@@ -49,17 +49,17 @@
       </GridPane>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" text="Login as healthcare provider">
+            <Button mnemonicParsing="false" onAction="#healthcareButtonListener" text="Login as healthcare provider">
                <HBox.margin>
                   <Insets left="20.0" top="50.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Login as shelter provider">
+            <Button mnemonicParsing="false" onAction="#shelterButtonListener" text="Login as shelter provider">
                <HBox.margin>
                   <Insets left="30.0" top="50.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Login as work provider">
+            <Button mnemonicParsing="false" onAction="#workButtonListener" text="Login as work provider">
                <HBox.margin>
                   <Insets left="30.0" top="50.0" />
                </HBox.margin>
@@ -68,12 +68,12 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" text="Login as patient">
+            <Button mnemonicParsing="false" onAction="#patientLoginButtonListener" text="Login as patient">
                <HBox.margin>
                   <Insets left="150.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Login as manager">
+            <Button mnemonicParsing="false" onAction="#ManagerLoginButtonListener" text="Login as manager">
                <HBox.margin>
                   <Insets left="80.0" />
                </HBox.margin>
