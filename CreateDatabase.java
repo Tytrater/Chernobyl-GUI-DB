@@ -1,3 +1,4 @@
+package GroupProject;
 import java.sql.*;   // Needed for JDBC classes
 
 public class CreateDatabase {
@@ -8,7 +9,7 @@ public class CreateDatabase {
 		      final String DB_URL = "jdbc:mysql://localhost:3306/";
 		      final String DB_COFFEE_URL = "jdbc:mysql://localhost:3306/projectData";
 		      final String USERNAME = "root";
-		      final String PASSWORD = "tytraterSQL191712!(!&!@";
+		      final String PASSWORD = "samigirl65";
 		      
 		      try {
 		         // Create a connection to the database.
@@ -87,13 +88,13 @@ public class CreateDatabase {
 		         Statement stmt = conn.createStatement();
 		         
 					// Create the table.
-					stmt.execute("CREATE TABLE Shelter ("+ 
-		   				       	 "ShelterTitle CHAR(25) NOT NULL PRIMARY KEY,"+ 
-		   				       	 "Address CHAR (75),"+ 
-		   				       	 "PhoneNumber CHAR (20),"+ 
-		   				         "Size1Capacity INT,"+ 
-		   				         "Size2Capacity INT,"+ 
-		                         "Size3Capacity INT)");
+					stmt.execute("CREATE TABLE Shelter "+ 
+		   				       	 "( ShelterTitle CHAR(25) NOT NULL PRIMARY KEY,"+ 
+		   				       	 " Address CHAR(75),"+ 
+		   				       	 " PhoneNumber CHAR(50),"+ 
+		   				         " Size1Capacity INT,"+ 
+		   				         " Size2Capacity INT,"+ 
+		                         " Size3Capacity INT )");
 									 
 					// Insert data
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterOne', 'sampleShelterAddress1', '548-25-621', 20,3,1)");
@@ -110,7 +111,7 @@ public class CreateDatabase {
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwelve','sampleShelterAddress12','444-25-4444', 5,2,5)");
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterThirteen','sampleShelterAddress13','001-25-008', 6,8,9)");
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterFourteen','sampleShelterAddress14','022-15-188', 5,4,4)");
-					stmt.execute("INSERT INTO Shelter VALUES ('ShelterFifteen','sampleShelterAddress15',8871-15-811', 5,5,4)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterFifteen','sampleShelterAddress15','8871-15-811', 5,5,4)");
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterSixteen','sampleShelterAddress16','522-25-7873', 5,2,5)");
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterSeventeen','sampleShelterAddress17','331-25-888', 2,2,5)");
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterEighteen','sampleShelterAddress18','022-25-0000', 5,3,10)");
@@ -120,7 +121,7 @@ public class CreateDatabase {
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyTwo','sampleShelterAddres22','333-25-8845', 1,2,10)");
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyThree','sampleShelterAddress23','331-25-888', 5,2,4)");
 					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyFour','sampleShelterAddress24','271-25-888', 5,8,10)");
-					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyFive,'sampleShelterAddress25','221-15-348', 5,4,10)");
+					stmt.execute("INSERT INTO Shelter VALUES ('ShelterTwentyFive','sampleShelterAddress25','221-15-348', 5,4,10)");
 					
 					
 					// confirmation message
@@ -135,50 +136,57 @@ public class CreateDatabase {
 			 * The buildWorkTable method creates the
 			 * Work table and adds some rows to it.
 			 */
+			
+			
+			
 			public static void buildWorkTable(Connection conn){
 				try { 
 		         // Get a Statement object.
 		         Statement stmt = conn.createStatement();
+		         System.out.println("Statement object created");
 		         
 					// Create the table.
-					stmt.execute("CREATE TABLE Work ("+
-							   "Name CHAR(25) NOT NULL PRIMARY KEY,"+
-							   "JobTitle CHAR(25),"+
-		   				       "Skills CHAR(25),"+ 
-		   				       "Address CHAR(75),"+ 
-		   				       "PhoneNumber CHAR(25),"+ 
-		                       "openings DOUBLE)");
+					stmt.execute("CREATE TABLE Work "+ 
+								"( Name CHAR(50)," +
+							   " JobTitle CHAR(50),"+ 
+		   				       " Skills CHAR(25),"+ 
+		   				       " Address CHAR(75),"+
+		   				       " PhoneNumber CHAR(75),"+
+		                       " Openings CHAR(10) )");
+					System.out.println("Work Table Created");
 									 
 					// Insert data
-					stmt.execute("INSERT INTO Work VALUES ('Emp1','Plumber','Trade','sampleaddress1', '350 44 494 6095', 15)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp2','Manager','Management','sampleaddress2','380 44 224 6045', 60)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp3','Administrator','Administration','sampleaddress3','381 44 284 6045', 30)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp4','Manager','Management','sampleaddress4','280 44 224 6045', 60)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp5','Plumber','Trade','sampleaddress5','750 54 724 6445', 120)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp6','Plumber','Trade','sampleaddress6','555 34 454 6569', 30)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp7','Administrator','Administration','sampleaddress7','310 44 567 4444', 45");
-					stmt.execute("INSERT INTO Work VALUES ('Emp8','Manager','Management','sampleaddress8','323 12 264 6045', 20)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp9','Manager','Management','sampleaddress9','37 0 44 224 6045', 45)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp10','Aministrator','Administration','sampleaddress10','480 74 664 6065', 30)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp11','Plumber','Trade','sampleaddress11','320 44 224 6045', 93)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp12','Plumber','Trade','sampleaddress12',270 43 233 3345', 40)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp13','Manager','Management','sampleaddress13','110 44 111 6345', 70)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp14','Plumber','Trade','sampleaddress14','380 33 224 6333', 90)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp15','Aministrator','Administration','sampleaddress15','380 42 224 6045', 30)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp16','Manager','Management','sampleaddress16','888 44 874 9945', 80)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp17','Aministrator','Administration','sampleaddress17','770 44 234 6045', 20)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp18','Manager','Management','sampleaddress18','311 94 774 7775', 60)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp19','Manager','Management','sampleaddress19','380 44 224 6045', 10)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp20','Aministrator','Administration'','sampleaddress20','990 94 224 9995', 10)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp21','Aministrator','Administration','sampleaddress21','555 94 224 6555', 40)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp22','Plumber','Trade','sampleaddress22','345 14 114 1145', 100)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp23','Manager','Management','sampleaddress23','999 54 325 9045', 60)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp24','Aministrator','Administration','sampleaddress24','222 34 564 6945', 20)");
-					stmt.execute("INSERT INTO Work VALUES ('Emp25','Plumber','Trade','sampleaddress25','111 34 224 6099', 20)");
+					stmt.execute("INSERT INTO Work VALUES ('emp1','Plumber', 'Trade', 'sampleAddress1', '350 44 494 6095', '15')");
+					stmt.execute("INSERT INTO Work VALUES ('emp2','Manager', 'Management', 'sampleAddress2', '678 40 214 6325', '20')");
+					stmt.execute("INSERT INTO Work VALUES ('emp3','Administrator', 'Administration', 'sampleAddress3', '111 22 333 444', '30')");
+					stmt.execute("INSERT INTO Work VALUES ('emp4','Plumber', 'Trade', 'sampleAddress4', '222 34 444 555', '5')");
+					stmt.execute("INSERT INTO Work VALUES ('emp5','Plumber', 'Trade', 'sampleAddress5', '667 74 888 999', '10')");
+					stmt.execute("INSERT INTO Work VALUES ('emp6','Manager', 'Management', 'sampleAddress6', '122 13 144 6155', '15')");
+					stmt.execute("INSERT INTO Work VALUES ('emp7','Administrator', 'Administration', 'sampleAddress7', '221 22 223 224', '25')");
+					stmt.execute("INSERT INTO Work VALUES ('emp8','Manager', 'Management', 'sampleAddress8', '888 77 666 5555', '35')");
+					stmt.execute("INSERT INTO Work VALUES ('emp9','Plumber', 'Trade', 'sampleAddress9', '332 00 111 0000', '10')");
+					stmt.execute("INSERT INTO Work VALUES ('emp10','Plumber', 'Trade', 'sampleAddress10', '000 11 777 6995', '15')");
+					stmt.execute("INSERT INTO Work VALUES ('emp11','Manager', 'Management', 'sampleAddress11', '999 44 323 6985', '25')");
+					stmt.execute("INSERT INTO Work VALUES ('emp12','Manager', 'Management', 'sampleAddress12', '345 67 890 1234', '10')");
+					stmt.execute("INSERT INTO Work VALUES ('emp13','Manager', 'Management', 'sampleAddress13', '432 89 999 9991', '5')");
+					stmt.execute("INSERT INTO Work VALUES ('emp14','Plumber', 'Trade', 'sampleAddress14', '999 01 100 2323', '20')");
+					stmt.execute("INSERT INTO Work VALUES ('emp15','Plumber', 'Trade', 'sampleAddress15', '896 57 464 9995', '15')");
+					stmt.execute("INSERT INTO Work VALUES ('emp16','Plumber', 'Trade', 'sampleAddress16', '123 21 233 1111', '15')");
+					stmt.execute("INSERT INTO Work VALUES ('emp17','Administrator', 'Administration', 'sampleAddress17', '546 78 001 0000', '30')");
+					stmt.execute("INSERT INTO Work VALUES ('emp18','Administrator', 'Administration', 'sampleAddress18', '989 67 1919 3429', '35')");
+					stmt.execute("INSERT INTO Work VALUES ('emp19','Administrator', 'Administration', 'sampleAddress19', '349 78 483 6325', '5')");
+					stmt.execute("INSERT INTO Work VALUES ('emp20','Plumber', 'Trade', 'sampleAddress20', '300 40 500 6000', '1')");
+					stmt.execute("INSERT INTO Work VALUES ('emp21','Plumber', 'Trade', 'sampleAddress21', '700 80 900 1000', '7')");
+					stmt.execute("INSERT INTO Work VALUES ('emp22','Manager', 'Management', 'sampleAddress22', '345 44 434 6775', '19')");
+					stmt.execute("INSERT INTO Work VALUES ('emp23','Administrator', 'Administration', 'sampleAddress23', '351 24 494 6495', '10')");
+					stmt.execute("INSERT INTO Work VALUES ('emp24','Plumber', 'Trade', 'sampleAddress24', '770 24 494 7995', '15')");
+					stmt.execute("INSERT INTO Work VALUES ('emp25','Plumber', 'Trade', 'sampleAddress25', '050 14 411 6655', '10')");
+					
+				
 					
 					
 					// confirmation message
-					System.out.println("Work table created.");
+					System.out.println("Patient values inserted");
 				} catch (SQLException ex) {
 		         System.out.println("ERROR: "+ex.getMessage());
 				}
