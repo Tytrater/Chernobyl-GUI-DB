@@ -1,8 +1,8 @@
-package edu.unlv.mis768.GUI;
+package edu.unlv.mis768.chernobylSam;
 
 import java.io.IOException;
 
-import edu.unlv.mis768.Model.Provider;
+import edu.unlv.mis768.chernobylSam.Provider;
 import edu.unlv.mis768.Model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

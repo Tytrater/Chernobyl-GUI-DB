@@ -1,4 +1,4 @@
-package edu.unlv.mis768.GUI;
+package edu.unlv.mis768.chernobylSam;
 
 import edu.unlv.mis768.Model.Provider;
 import edu.unlv.mis768.Model.User;

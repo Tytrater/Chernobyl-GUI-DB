@@ -1,4 +1,4 @@
-package edu.unlv.mis768.GUI;
+package edu.unlv.mis768.chernobylSam;
 
 import java.sql.SQLException;
 

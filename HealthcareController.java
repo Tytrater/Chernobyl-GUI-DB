@@ -1,4 +1,4 @@
-package GroupProject;
+package edu.unlv.mis768.chernobylSam;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
