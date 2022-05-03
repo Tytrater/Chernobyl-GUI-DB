@@ -1,4 +1,4 @@
-package edu.unlv.mis768.Model;
+package edu.unlv.mis768.Chernobyl;
 
 public class Manager extends User {
 	
